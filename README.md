@@ -40,7 +40,7 @@ minikube start
 
 ### 3. Apply Secrets & Cluster Configurations
 Create your local credentials file from the template and apply the manifest definitions:
-# Note: Ensure you configure your base64 secrets locally!
+#### Note: Ensure you configure your base64 secrets locally!
 kubectl apply -f secret.yaml
 kubectl apply -f mongo-config.yaml
 kubectl apply -f mongo.yaml
@@ -48,10 +48,10 @@ kubectl apply -f mongo-express.yaml
 
 ### 4. Bypassing Windows/Docker Networking Quirks
 Because the Docker driver isolates the container network on Windows, standard NodePorts/LoadBalancers won't expose automatically to your local browser. Use explicit Kubernetes port-forwarding to map the pod directly:
-# 1. Get your active Mongo Express pod name
+#### 1. Get your active Mongo Express pod name
 kubectl get pods
 
-# 2. Forward local port 8081 to the container
+#### 2. Forward local port 8081 to the container
 kubectl port-forward pod/<YOUR-MONGO-EXPRESS-POD-NAME> 8081:8081
 
 Now, safely open your browser and navigate to:``` http://127.0.0.1:8081```
