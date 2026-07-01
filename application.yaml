@@ -9,7 +9,9 @@ spec:
   source:
     repoURL: https://github.com/jay240322/k8s-mongo-express-architecture.git
     targetRevision: HEAD
-    path: manifests
+    path: kubernete/
+    drectory:
+      exclude: 'application.yaml'
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
