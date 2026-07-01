@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/jay240322/k8s-mongo-express-architecture.git
     targetRevision: HEAD
-    path: kubernete/
+    path: .
     directory:
       exclude: 'application.yaml'
   destination:
